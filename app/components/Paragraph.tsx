@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { Barlow_Condensed } from "next/font/google";
+import { Barlow } from "next/font/google";
 
-const barlow_condensed = Barlow_Condensed({
+const barlow_condensed = Barlow({
   weight: "400",
   subsets: ["latin"],
 });
@@ -14,8 +14,8 @@ interface Props {
 export default function Paragraph({ className, children }: Props) {
   return (
     <p
-      className={`text-gray-400 ${barlow_condensed.className} ${className}`}
-      style={{ fontSize: "1rem", lineHeight: "1.75rem" }}
+      className={`${barlow_condensed.className} ${className}`}
+      style={{ fontSize: "1rem", lineHeight: "1.75rem", color: "#D0D6F9" }}
     >
       {children}
     </p>

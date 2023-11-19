@@ -2,10 +2,17 @@ import Heading1 from "@/app/components/Heading1";
 import Heading5 from "@/app/components/Heading5";
 import Paragraph from "@/app/components/Paragraph";
 import Explore from "@/app/Explore";
+import NavBar from "@/app/NavBar";
 
 export default function Home() {
   return (
-    <>
+    <div
+      className="bg-[url('/home/background-home-mobile.jpg')]
+  sm:bg-[url('/home/background-home-tablet.jpg')]
+  lg:bg-[url('/home/background-home-desktop.jpg')]
+  bg-cover h-screen"
+    >
+      <NavBar />
       <div className="mt-24" />
       <Heading5 className={"text-center pb-5"}>
         SO, YOU WANT TO TRAVEL TO
@@ -25,7 +32,6 @@ export default function Home() {
           <Explore />
         </div>
       </div>
-    </>
-    // </div>
+    </div>
   );
 }

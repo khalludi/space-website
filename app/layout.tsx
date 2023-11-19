@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Bellefair } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/app/NavBar";
 
 const bellefair = Bellefair({
   weight: "400",
@@ -20,17 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${bellefair.className}`}>
-        <div
-          className="bg-[url('/home/background-home-mobile.jpg')]
-      sm:bg-[url('/home/background-home-tablet.jpg')]
-      lg:bg-[url('/home/background-home-desktop.jpg')]
-      bg-cover h-screen"
-        >
-          <NavBar />
-          {children}
-        </div>
-      </body>
+      <body className={`${bellefair.className}`}>{children}</body>
     </html>
   );
 }
