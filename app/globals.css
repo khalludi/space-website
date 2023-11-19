@@ -9,3 +9,7 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.rotate{ animation: rotate 10s linear infinite; }
+
+@keyframes rotate{ to{ transform: rotate(360deg); } }

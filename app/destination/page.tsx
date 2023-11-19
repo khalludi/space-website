@@ -83,8 +83,8 @@ export default function DestinationPage() {
         <strong className="opacity-25">01</strong> PICK YOUR DESTINATION
       </Heading5>
       <div className="p-5 flex flex-col items-center">
-        <Image
-          className="mt-5"
+        <img
+          className="mt-5 rotate"
           src={`/destination/image-${planet}.png`}
           alt="Image of the moon"
           width={300}
