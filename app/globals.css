@@ -10,6 +10,21 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.bg-custom {
+  background-size: cover;
+  animation: sidescroller 100000s linear infinite;
+  height: 100vh;
+}
+
+@keyframes sidescroller {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 1000000px 0;
+  }
+}
+
 .rotate{ animation: rotate 10s linear infinite; }
 
 @keyframes rotate{ to{ transform: rotate(360deg); } }

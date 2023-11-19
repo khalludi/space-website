@@ -73,17 +73,15 @@ export default function DestinationPage() {
 
   return (
     <div
-      className="bg-[url('/destination/background-destination-mobile.jpg')]
-  sm:bg-[url('/destination/background-destination-tablet.jpg')]
-  lg:bg-[url('/destination/background-destination-desktop.jpg')]
-  bg-cover h-screen"
+      className="bg-[url('/destination/background-destination-desktop.jpg')]
+      bg-cover h-screen bg-custom"
     >
       <NavBar />
       <Heading5 className="text-white m-10">
         <strong className="opacity-25">01</strong> PICK YOUR DESTINATION
       </Heading5>
       <div className="p-5 flex flex-col items-center">
-        <img
+        <Image
           className="mt-5 rotate"
           src={`/destination/image-${planet}.png`}
           alt="Image of the moon"
