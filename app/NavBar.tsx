@@ -1,18 +1,20 @@
-"use client";
-
 import Image from "next/image";
 import { Barlow_Condensed } from "next/font/google";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const barlow_condensed = Barlow_Condensed({
   weight: "400",
   subsets: ["latin"],
 });
 
-export default function NavBar() {
-  const pathname = usePathname();
-  const navLinks = [
+type Pages = "HOME" | "DESTINATION" | "CREW" | "TECHNOLOGY";
+
+interface Props {
+  page: Pages;
+}
+
+export default function NavBar({ page }: Props) {
+  const navLinks: { label: Pages; href: string }[] = [
     { label: "HOME", href: "/" },
     { label: "DESTINATION", href: "/destination" },
     { label: "CREW", href: "/crew" },
@@ -48,7 +50,7 @@ export default function NavBar() {
             >
               <strong className="pe-2 hidden">0{index}</strong> {navLink.label}
             </li>
-            {navLink.href === pathname && (
+            {navLink.label === page && (
               <div className={"absolute border-b-2 bg-white bottom-0 w-full"} />
             )}
           </Link>

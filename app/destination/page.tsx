@@ -76,7 +76,7 @@ export default function DestinationPage() {
       className="bg-[url('/destination/background-destination-desktop.jpg')]
       bg-cover h-screen bg-custom"
     >
-      <NavBar />
+      <NavBar page="DESTINATION" />
       <Heading5 className="text-white m-10">
         <strong className="opacity-25">01</strong> PICK YOUR DESTINATION
       </Heading5>

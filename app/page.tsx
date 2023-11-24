@@ -12,7 +12,7 @@ export default function Home() {
   lg:bg-[url('/home/background-home-desktop.jpg')]
   bg-cover h-screen"
     >
-      <NavBar />
+      <NavBar page="HOME" />
       <div className="mt-24" />
       <Heading5 className={"text-center pb-5"}>
         SO, YOU WANT TO TRAVEL TO
